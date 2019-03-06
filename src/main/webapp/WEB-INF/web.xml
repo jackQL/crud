@@ -9,6 +9,14 @@
   <display-name>srmo_ssm</display-name>
   <description>srmo_ssm_Alpha_0.0.1</description>
 
+  <!--配置加载Spring文件的监听器-->
+<context-param>
+  <param-name>contextConfigLocation</param-name>
+  <param-value>classpath:applicationContext.xml</param-value>
+</context-param>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
   <!-- 编码过滤器 -->
   <filter>
     <filter-name>encodingFilter</filter-name>
