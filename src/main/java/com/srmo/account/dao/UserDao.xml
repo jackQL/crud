@@ -3,6 +3,6 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper>
     <select id="findUserById" parameterType="Integer" resultType="User">
-        select * from srmo_user where id = #{id}
+        select * from my_user where id = #{id}
     </select>
 </mapper>

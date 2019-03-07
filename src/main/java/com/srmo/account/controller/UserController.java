@@ -12,7 +12,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/findCustomerById")
+    @RequestMapping("/findUserById")
     public String findUserById(Integer id, Model model){
         User user = userService.findUserById(id);
         model.addAttribute("user",user);
