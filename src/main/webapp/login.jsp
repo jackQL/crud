@@ -4,19 +4,26 @@
 
 
     function login() {
+
         $.ajax({
-            url: 'login?id=1&username=jack',
+            url: 'login',
             type: 'post',
+            data:{
+                id:1,
+                username:'F:/Program Files (x86)/Netease/CloudMusic/cloudmusic.exe'
+                // username:'F:/Program Files (x86)/Netease/CloudMusic/cloudmusic.exe'
+                // username:'F:\\Program Files (x86)\\Netease\\CloudMusic\\cloudmusic.exe'
+            },
             success: function (data) {
                 var result = data.result;
                 if (result == 'true' || result == true) {
-                    alert("登录成功");
+
                 } else {
-                    alert("登录失败");
+
                 }
             },
             error: function (data) {
-                alert(data);
+
             }
         })
     }
