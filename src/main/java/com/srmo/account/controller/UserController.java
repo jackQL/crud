@@ -19,4 +19,15 @@ public class UserController {
         return "user";
 
     }
+
+    @RequestMapping("login")
+    public String login(Integer id, String username) {
+        System.out.println("hello login?");
+        User userLogin = userService.findUserById(id);
+        if (id.equals(userLogin.getId()) && username.equals(userLogin.getUsername())) {
+            return "index";
+        } else {
+            return "fuck";
+        }
+    }
 }
